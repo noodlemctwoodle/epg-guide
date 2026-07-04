@@ -31,6 +31,14 @@ jobs:
           - programtv.onet.pl
           - programetv.ro
           - tataplay.com
+          - tvprofil.com
+          - dstv.com
+          - superguidatv.it
+          - meo.pt
+          - dishtv.in
+          - mysky.com.ph
+          - gatotv.com
+          - zap2it.com
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
