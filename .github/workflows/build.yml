@@ -46,7 +46,7 @@ jobs:
           mkdir -p dist
           npm run grab -- --sites=${{ matrix.site }} --days=3 --maxConnections=15 --timeout=45000 --output=dist/${{ matrix.site }}.xml
       - name: Upload guide
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: part-${{ matrix.site }}
           path: engine/dist/${{ matrix.site }}.xml
@@ -67,7 +67,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Download international guides
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           path: intl_guides
           pattern: part-*
